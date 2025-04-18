@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function() {
     "@type": "Person",
     "name": "Isaac Salirrosas",
     "url": "https://isaacsalirrosas-portfolio.vercel.app/",
-    "image": "https://isaacsalirrosas-portfolio.vercel.app/og-image.jpg",
+    "image": "https://isaacsalirrosas-portfolio.vercel.app/og-image.jpeg",
     "jobTitle": "Frontend Developer",
     "worksFor": {
       "@type": "Organization",
