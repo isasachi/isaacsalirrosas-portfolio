@@ -1,7 +1,9 @@
 import { useState, useRef } from 'react';
 import emailjs from '@emailjs/browser';
+import { useTranslation } from 'react-i18next';
 
 const Contact = () => {
+  const { t } = useTranslation();
   const form = useRef<HTMLFormElement>(null);
   const [formData, setFormData] = useState({
     name: '',
@@ -35,7 +37,7 @@ const Contact = () => {
         .then((result) => {
           console.log('Email sent successfully:', result.text);
           setIsSubmitting(false);
-          setSubmitMessage('Thank you! Your message has been sent.');
+          setSubmitMessage(t('contact.messageSent', 'Thank you! Your message has been sent.'));
           setFormData({ name: '', email: '', message: '' });
           
           // Clear success message after 5 seconds
@@ -45,7 +47,7 @@ const Contact = () => {
           console.error('Error sending email:', error);
           setIsSubmitting(false);
           setSubmitError(true);
-          setSubmitMessage('Oops! Something went wrong. Please try again.');
+          setSubmitMessage(t('contact.messageError', 'Oops! Something went wrong. Please try again.'));
         });
     }
   };
@@ -54,13 +56,13 @@ const Contact = () => {
     <section id="contact" className="py-16 bg-gray-100">
       <div className="container mx-auto px-4">
         <h2 className="text-3xl md:text-4xl font-bold mb-8 text-center text-gray-800">
-          Get In <span className="text-primary">Touch</span>
+          {t('contact.title')}
         </h2>
         
         <div className="max-w-3xl mx-auto bg-white rounded-lg shadow-md p-8">
           <div className="flex flex-col md:flex-row gap-8">
             <div className="md:w-1/3">
-              <h3 className="text-xl font-semibold mb-4 text-gray-800">Contact Information</h3>
+              <h3 className="text-xl font-semibold mb-4 text-gray-800">{t('contact.contactInfo', 'Contact Information')}</h3>
               
               <div className="space-y-4">
                 <div className="flex items-start gap-3">
@@ -68,7 +70,7 @@ const Contact = () => {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                   </svg>
                   <div>
-                    <p className="font-medium">Email</p>
+                    <p className="font-medium">{t('contact.emailLabel', 'Email')}</p>
                     <a href="mailto:isaac.salirrosas@example.com" className="text-primary hover:underline">isaacsalirrosasc@gmail.com</a>
                   </div>
                 </div>
@@ -79,7 +81,7 @@ const Contact = () => {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                   </svg>
                   <div>
-                    <p className="font-medium">Location</p>
+                    <p className="font-medium">{t('contact.locationLabel', 'Location')}</p>
                     <p className="text-gray-600">Trujillo, Peru</p>
                   </div>
                 </div>
@@ -89,14 +91,14 @@ const Contact = () => {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
                   <div>
-                    <p className="font-medium">Availability</p>
-                    <p className="text-gray-600">Open to opportunities</p>
+                    <p className="font-medium">{t('contact.availabilityLabel', 'Availability')}</p>
+                    <p className="text-gray-600">{t('contact.availabilityStatus', 'Open to opportunities')}</p>
                   </div>
                 </div>
               </div>
               
               <div className="mt-6">
-                <h4 className="font-medium mb-2">Connect with me</h4>
+                <h4 className="font-medium mb-2">{t('contact.connectWithMe', 'Connect with me')}</h4>
                 <div className="flex space-x-4">
                   <a 
                     href="https://github.com/isasachi" 
@@ -133,11 +135,11 @@ const Contact = () => {
             </div>
             
             <div className="md:w-2/3">
-              <h3 className="text-xl font-semibold mb-4 text-gray-800">Send Me a Message</h3>
+              <h3 className="text-xl font-semibold mb-4 text-gray-800">{t('contact.sendMessage', 'Send Me a Message')}</h3>
               
               <form ref={form} onSubmit={handleSubmit}>
                 <div className="mb-4">
-                  <label htmlFor="name" className="block text-sm font-medium mb-1 text-gray-700">Name</label>
+                  <label htmlFor="name" className="block text-sm font-medium mb-1 text-gray-700">{t('contact.name')}</label>
                   <input 
                     type="text" 
                     id="name" 
@@ -150,7 +152,7 @@ const Contact = () => {
                 </div>
                 
                 <div className="mb-4">
-                  <label htmlFor="email" className="block text-sm font-medium mb-1 text-gray-700">Email</label>
+                  <label htmlFor="email" className="block text-sm font-medium mb-1 text-gray-700">{t('contact.email')}</label>
                   <input 
                     type="email" 
                     id="email" 
@@ -163,7 +165,7 @@ const Contact = () => {
                 </div>
                 
                 <div className="mb-4">
-                  <label htmlFor="message" className="block text-sm font-medium mb-1 text-gray-700">Message</label>
+                  <label htmlFor="message" className="block text-sm font-medium mb-1 text-gray-700">{t('contact.message')}</label>
                   <textarea 
                     id="message" 
                     name="message" 
@@ -180,7 +182,7 @@ const Contact = () => {
                   className="px-6 py-3 border border-primary text-primary font-medium rounded-md cursor-pointer hover:bg-primary/10 transition-colors disabled:opacity-70 disabled:cursor-not-allowed"
                   disabled={isSubmitting}
                 >
-                  {isSubmitting ? 'Sending...' : 'Send Message'}
+                  {isSubmitting ? t('contact.sending', 'Sending...') : t('contact.send')}
                 </button>
                 
                 {submitMessage && (

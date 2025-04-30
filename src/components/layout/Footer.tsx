@@ -1,4 +1,7 @@
+import { useTranslation } from "react-i18next";
+
 const Footer = () => {
+  const { t } = useTranslation();
   const currentYear = new Date().getFullYear();
 
   return (
@@ -7,7 +10,7 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="mb-4 md:mb-0">
             <p className="text-gray-600">
-              &copy; {currentYear} Isaac Salirrosas. All rights reserved.
+              &copy; {currentYear} {t('footer.copyright', 'Isaac Salirrosas. All rights reserved.')}
             </p>
           </div>
           <div className="flex space-x-4">

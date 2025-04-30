@@ -1,0 +1,60 @@
+{
+  "navigation": {
+    "home": "Home",
+    "about": "About",
+    "projects": "Projects",
+    "contact": "Contact",
+    "language": "Language"
+  },
+  "hero": {
+    "greeting": "Hello, I'm",
+    "role": "Frontend Developer",
+    "description": "I build modern, responsive web applications with React, TypeScript, and Tailwind CSS.",
+    "cta": "View My Work"
+  },
+  "about": {
+    "title": "About Me",
+    "description": "I'm a passionate frontend developer with experience in building web applications. I love creating intuitive user interfaces and solving complex problems with clean code.",
+    "skills": "Skills",
+    "downloadResume": "Download Resume"
+  },
+  "projects": {
+    "title": "Projects",
+    "viewProject": "View Project",
+    "sourceCode": "Source Code",
+    "project1": {
+      "title": "World Language Foundation Admin Dashboard",
+      "description": "A responsive admin dashboard with user authentication for managing World Language Foundation's operations."
+    },
+    "project2": {
+      "title": "Synapse AI Business Website",
+      "description": "A website for Synapse AI, a software development company, with real-time AI text generation demo"
+    },
+    "project3": {
+      "title": "Handmade Crafts E-commerce Website",
+      "description": "An e-commerce website for handmade crafts with user authentication and products filtering."
+    }
+  },
+  "contact": {
+    "title": "Contact Me",
+    "description": "Feel free to reach out if you have any questions or would like to work together.",
+    "name": "Name",
+    "email": "Email",
+    "message": "Message",
+    "send": "Send Message",
+    "sending": "Sending...",
+    "messageSent": "Thank you! Your message has been sent.",
+    "messageError": "Oops! Something went wrong. Please try again.",
+    "contactInfo": "Contact Information",
+    "sendMessage": "Send Me a Message",
+    "emailLabel": "Email",
+    "locationLabel": "Location",
+    "availabilityLabel": "Availability",
+    "availabilityStatus": "Open to opportunities",
+    "connectWithMe": "Connect with me"
+  },
+  "footer": {
+    "copyright": "Isaac Salirrosas. All rights reserved.",
+    "madeWith": "Made with"
+  }
+}

@@ -1,33 +1,34 @@
 import profileImage from '../../assets/images/isaac_profile_sm.jpg';
+import { useTranslation } from 'react-i18next';
 
 const Hero = () => {
+  const { t } = useTranslation();
   return (
     <section id="home" className="pt-24 pb-12 md:pt-32 md:pb-24 bg-gray-50">
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row items-center">
           <div className="md:w-1/2 mb-8 md:mb-0">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-gray-800">
-              Hi, I'm <span className="text-primary">Isaac Salirrosas</span>
+              {t('hero.greeting')} <span className="text-primary">Isaac Salirrosas</span>
             </h1>
             <h2 className="text-2xl md:text-3xl font-medium mb-6 text-gray-600">
-              Frontend Developer
+              {t('hero.role')}
             </h2>
             <p className="text-lg mb-8 max-w-lg">
-              I build beautiful, responsive websites with modern technologies.
-              Passionate about creating exceptional user experiences.
+              {t('hero.description')}
             </p>
             <div className="flex space-x-4">
               <a 
                 href="#contact" 
                 className="px-6 py-3 bg-primary text-white rounded-md hover:bg-primary/90 transition-colors"
               >
-                Contact Me
+                {t('navigation.contact')}
               </a>
               <a 
                 href="#projects" 
                 className="px-6 py-3 border border-primary text-primary rounded-md hover:bg-primary/10 transition-colors"
               >
-                View Projects
+                {t('hero.cta')}
               </a>
             </div>
           </div>

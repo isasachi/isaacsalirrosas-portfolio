@@ -1,0 +1,60 @@
+{
+  "navigation": {
+    "home": "Inicio",
+    "about": "Sobre mí",
+    "projects": "Proyectos",
+    "contact": "Contacto",
+    "language": "Idioma"
+  },
+  "hero": {
+    "greeting": "Hola, soy",
+    "role": "Desarrollador Frontend",
+    "description": "Construyo aplicaciones web modernas y responsivas con React, TypeScript y Tailwind CSS.",
+    "cta": "Ver Mi Trabajo"
+  },
+  "about": {
+    "title": "Sobre Mí",
+    "description": "Soy un desarrollador frontend apasionado con experiencia en la construcción de aplicaciones web. Me encanta crear interfaces de usuario intuitivas y resolver problemas complejos con código limpio.",
+    "skills": "Habilidades",
+    "downloadResume": "Descargar Curriculum"
+  },
+  "projects": {
+    "title": "Proyectos",
+    "viewProject": "Ver Proyecto",
+    "sourceCode": "Código Fuente",
+    "project1": {
+      "title": "Panel de Administración de World Language Foundation",
+      "description": "Un panel de administración responsivo con autenticación de usuarios para gestionar las operaciones de World Language Foundation."
+    },
+    "project2": {
+      "title": "Sitio Web Empresarial de Synapse AI",
+      "description": "Un sitio web para Synapse AI, una empresa de desarrollo de software, con demo de generación de texto con IA en tiempo real"
+    },
+    "project3": {
+      "title": "Tienda Online de Artesanías",
+      "description": "Una tienda online para artesanías hechas a mano con autenticación de usuarios y filtrado de productos."
+    }
+  },
+  "contact": {
+    "title": "Contáctame",
+    "description": "No dudes en contactarme si tienes alguna pregunta o te gustaría trabajar juntos.",
+    "name": "Nombre",
+    "email": "Correo Electrónico",
+    "message": "Mensaje",
+    "send": "Enviar Mensaje",
+    "sending": "Enviando...",
+    "messageSent": "¡Gracias! Tu mensaje ha sido enviado.",
+    "messageError": "¡Ups! Algo salió mal. Por favor, inténtalo de nuevo.",
+    "contactInfo": "Información de Contacto",
+    "sendMessage": "Envíame un Mensaje",
+    "emailLabel": "Correo",
+    "locationLabel": "Ubicación",
+    "availabilityLabel": "Disponibilidad",
+    "availabilityStatus": "Abierto a oportunidades",
+    "connectWithMe": "Conéctate conmigo"
+  },
+  "footer": {
+    "copyright": "Isaac Salirrosas. Todos los derechos reservados.",
+    "madeWith": "Hecho con"
+  }
+}
